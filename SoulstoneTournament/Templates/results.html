@@ -1,0 +1,64 @@
+<p style="font-size:20px; ">After running {{num_trials}} simulations of opening {{mortal}} mortal soulstone(s), {{immortal}} immortal
+     soulstone(s), and {{eternal}} eternal soulstone(s), {{percentage_desired}}% of trials gave at least
+     {{desired_points}} points.</p>
+
+<p style="font-size:20px; "><a href = "/">Return to soulstone number entry</a></p>
+
+     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+
+
+<canvas id="chart" width="500" height="600">
+    <script>
+        let bin_range_0 = "{{bin_range_0}}";
+        let bin_range_1 = "{{bin_range_1}}";
+        let bin_range_2 = "{{bin_range_2}}";
+        let bin_range_3 = "{{bin_range_3}}";
+        let bin_range_4 = "{{bin_range_4}}";
+        let bin_range_5 = "{{bin_range_5}}";
+        let bin_range_6 = "{{bin_range_6}}";
+        let bin_range_7 = "{{bin_range_7}}";
+        let bin_range_8 = "{{bin_range_8}}";
+        let bin_range_9 = "{{bin_range_9}}";
+        let bin_range_10 = "{{bin_range_10}}";
+
+        let bin_count_0 = "{{bin_count_0}}";
+        let bin_count_1 = "{{bin_count_1}}";
+        let bin_count_2 = "{{bin_count_2}}";
+        let bin_count_3 = "{{bin_count_3}}";
+        let bin_count_4 = "{{bin_count_4}}";
+        let bin_count_5 = "{{bin_count_5}}";
+        let bin_count_6 = "{{bin_count_6}}";
+        let bin_count_7 = "{{bin_count_7}}";
+        let bin_count_8 = "{{bin_count_8}}";
+        let bin_count_9 = "{{bin_count_9}}";
+        let bin_count_10 = "{{bin_count_10}}";
+
+        let ctx = document.getElementById("chart").getContext("2d");
+
+        let chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: [bin_range_0, bin_range_1, bin_range_2, bin_range_3,
+                    bin_range_4, bin_range_5, bin_range_6, bin_range_7,
+                    bin_range_8, bin_range_8, bin_range_10],
+            datasets: [
+                {
+                label: "Number of Simulations Yielding Point Values in Range",
+                backgroundColor: "#79AEC8",
+                borderColor: "#417690",
+                data: [bin_count_0, bin_count_1, bin_count_2, bin_count_3,
+                         bin_count_4, bin_count_5, bin_count_6, bin_count_7,
+                         bin_count_8, bin_count_9, bin_count_10]
+                }
+            ]
+        },
+        options: {
+            title: {
+                text: "Number of Simulations Yielding Point Values in Range",
+                display: true
+            },
+            responsive: false
+        }
+        });
+        </script>
+    </canvas>

@@ -1,0 +1,142 @@
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+h4 {
+    color : red;
+}
+
+</style>
+<body>
+
+<h3>Soul Stone Tournament Point Predictions</h3>
+
+{% for message in messages %}
+<h4>{{message}}</h4>
+{%endfor%}
+
+<p>Enter the quantity of your soulstones:</p>
+
+<form method='get' action = 'results'>
+<p>Mortal Soulstones:</p>
+<input type = 'number' name = 'mortal'>
+<p>Immortal Soulstones:</p>
+<input type = 'number' name = 'immortal'>
+<p>Eternal Soulstones:</p>
+<input type = 'number' name = 'eternal'>
+<p>Desired point value:</p>
+<input type = 'number' name = 'desiredpoints'><br>
+<input type = 'submit'>
+</form>
+
+<h3>Points for souls</h3>
+<table>
+    <tr>
+      <th> </th>
+      <th>1 star</th>
+      <th>2 star</th>
+      <th>3 star</th>
+      <th>4 star</th>
+      <th>5 star</th>
+      <th>6 star</th>
+    </tr>
+    <tr>
+      <th>Rare </th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>6</th>
+      <th>30</th>
+      <th>70</th>
+    </tr>
+    <tr>
+      <th>Epic </th>
+      <th>5</th>
+      <th>6</th>
+      <th>12</th>
+      <th>30</th>
+      <th>135</th>
+      <th>300</th>
+    </tr>
+    <tr>
+      <th>Legendary</th>
+      <th>15</th>
+      <th>20</th>
+      <th>40</th>
+      <th>100</th>
+      <th>450</th>
+      <th>1000</th>
+    </tr>
+  </table>
+
+  
+<h3>Rarity Odds</h3>
+
+<table>
+    <tr>
+      <th> </th>
+      <th>Rare</th>
+      <th>Epic</th>
+      <th>Legendary</th>
+    </tr>
+    <tr>
+      <th>Mortal</th>
+      <th>66%</th>
+      <th>28%</th>
+      <th>6%</th>
+    </tr>
+    <tr>
+      <th>Immortal</th>
+      <th>46%</th>
+      <th>42%</th>
+      <th>12%</th>
+    </tr>
+    <tr>
+      <th>Eternal</th>
+      <th>0%</th>
+      <th>80%</th>
+      <th>20%</th>
+    </tr>
+  </table>
+
+  <h3>Rank Odds</h3>
+  
+<table>
+    <tr>
+      <th> </th>
+      <th>1 star</th>
+      <th>2 star</th>
+      <th>3 star</th>
+      <th>4 star</th>
+      <th>5 star</th>
+      <th>6 star</th>
+    </tr>
+    <tr>
+      <th>Mortal</th>
+      <th>48%</th>
+      <th>34%</th>
+      <th>12%</th>
+      <th>4%</th>
+      <th>1.5%</th>
+      <th>0.5%</th>
+    </tr>
+    <tr>
+      <th>Immortal</th>
+      <th>0%</th>
+      <th>0%</th>
+      <th>52%</th>
+      <th>32%</th>
+      <th>12%</th>
+      <th>4%</th>
+    </tr>
+    <tr>
+      <th>Eternal</th>
+      <th>0%</th>
+      <th>0%</th>
+      <th>0%</th>
+      <th>0%</th>
+      <th>80%</th>
+      <th>20%</th>
+    </tr>
+  </table>
