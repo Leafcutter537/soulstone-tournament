@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-upjz)kz)yde&$=bkfd=0l9r487xb3l8v2e#5v*4h4(kt2w^y35
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'soulstone-tournament-001ebef42429.herokuapp.com'
+]
 
 
 # Application definition
